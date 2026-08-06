@@ -3,7 +3,6 @@
 # Import python packages
 
 import streamlit as st 
-import snowflake.connector.python
 #SiS
 #from snowflake.snowpark.context import get_active_session
 #from snowflake.snowpark.functions import col
