@@ -47,7 +47,7 @@ st.stop()
 
 #pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
-$st.stop()
+#st.stop()
 
 # if ingredients_list:
 #     st.write(ingredients_list)
