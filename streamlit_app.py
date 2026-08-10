@@ -34,6 +34,7 @@ st.dataframe(data=my_dataframe, use_container_width=True)
 
 if ingredients_list:
   ingredients_string=''
+   st.write('ingredients_string empty!')
   
   for fruit_chosen in ingredients_string:
     ingredients_string += fruit_chosen + ' '
