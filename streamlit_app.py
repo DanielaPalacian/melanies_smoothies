@@ -43,7 +43,7 @@ if ingredients_list:
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/{search_on}")
     sf_df=st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
-st.write(ingredients_string)
+    st.write(ingredients_string)
 st.stop()
 
 name_on_order = title
