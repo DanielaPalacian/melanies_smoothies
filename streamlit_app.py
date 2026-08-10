@@ -30,6 +30,8 @@ st.dataframe(data=my_dataframe, use_container_width=True)
 #pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
 
+ ingredients_string=''
+
 if ingredients_list:
   ingredients_string=''
   
