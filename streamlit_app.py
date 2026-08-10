@@ -35,7 +35,7 @@ st.write('This oreder is made by ', title)
 cnx=st.connection("snowflake")
 session= cnx.session()
 
-my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'),col('SEARCH_ON'))
 ingredients_list = st.multiselect(
     'Choose up to 5 incredients'
     ,my_dataframe
