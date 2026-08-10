@@ -26,8 +26,8 @@ st.write(
 
 # st.write("You selected:", option)
 
-title = st.text_input('Movie Title','Dana')
-st.write('The current movie title is', title)
+title = st.text_input('Ordered by','Dana')
+st.write('This oreder is made by ', title)
 
 #table
 
