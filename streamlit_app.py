@@ -14,7 +14,7 @@ st.write(
 )
 
 title = st.text_input('Ordered by:','Dana')
-st.write('This oreder is made by ', title)
+st.write('This order is made by ', title)
 
 cnx=st.connection("snowflake")
 session= cnx.session()
@@ -29,7 +29,6 @@ st.dataframe(data=my_dataframe, use_container_width=True)
 
 #pd_df=my_dataframe.to_pandas()
 #st.dataframe(pd_df)
-#st.stop()
 
 if ingredients_list:
   ingredients_string=''
@@ -44,7 +43,9 @@ if ingredients_list:
     smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/{search_on}")
     sf_df=st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
 
-#st.write(ingredients_string)
+st.write(ingredients_string)
+st.stop()
+
 name_on_order = title
 my_insert_stmt = """ insert into smoothies.public.orders(ingredients, name_on_order)
                     values ('""" + ingredients_string + """','""" + name_on_order + """')"""
@@ -56,8 +57,3 @@ time_to_insert =st.button('Submit Order')
 if time_to_insert:
     session.sql(my_insert_stmt).collect()
     st.success('Your Smoothie is ordered, '+ name_on_order +'!', icon="✅")
-
-
-
-
-
