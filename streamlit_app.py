@@ -19,10 +19,10 @@ st.write(
 )
 
 #select box
-# option = st.selectbox(
-#     "What is your favourite fruit?",
-#     ("Strawberry", "Banana", "Peaches")
-# )
+option = st.selectbox(
+     "What is your favourite fruit?",
+     ("Strawberry", "Banana", "Peaches")
+)
 
 # st.write("You selected:", option)
 
